@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-image: url('bharath1.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .apply_box {
+            max-width: 600px;
+            padding: 30px;
+            background: linear-gradient(145deg, #ffffff, #e6e6e6);
+            margin: 0 auto;
+            margin-top: 100px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border: 1px solid #ccc;
+        }
+
+        .title_small {
+            font-size: 36px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form_container {
+            margin: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .form_control {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input, textarea, select {
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #6dd5fa;
+            box-shadow: 0 0 8px rgba(109, 213, 250, 0.8);
+        }
+
+        .button_container {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 12px 24px;
+            background-color: #6dd5fa;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2193b0;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(33, 147, 176, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="apply_box">
+            <h1 style="text-align: center;">Product Review Form</h1>
+            <form action="" enctype="multipart/form-data">
+               <div class="form_container">
+                <div class="form_control">
+                    <label for="Name">Name:</label>
+                    <input id="Name" name="Name" placeholder="Enter your name..." required />
+                </div>
+                <div class="form_control">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email..." required />
+                </div>
+                <div class="form_control">
+                    <label for="product_quality">Product Quality:</label>
+                    <select id="product_quality" name="product_quality" required>
+                        <option value="">Select</option>
+                        <option value="Poor">Poor</option>
+                        <option value="Fair">Fair</option>
+                        <option value="Good">Good</option>
+                        <option value="Excellent">Excellent</option>
+                    </select>
+                </div>
+                <div class="form_control">
+                    <label for="usability">Usability:</label>
+                    <select id="usability" name="usability" required>
+                        <option value="">Select</option>
+                        <option value="Poor">Poor</option>
+                        <option value="Fair">Fair</option>
+                        <option value="Good">Good</option>
+                        <option value="Excellent">Excellent</option>
+                    </select>
+                </div>
+                <div class="form_control">
+                    <label for="value_for_money">Value for Money:</label>
+                    <select id="value_for_money" name="value_for_money" required>
+                        <option value="">Select</option>
+                        <option value="Poor">Poor</option>
+                        <option value="Fair">Fair</option>
+                        <option value="Good">Good</option>
+                        <option value="Excellent">Excellent</option>
+                    </select>
+                </div>
+                <div class="form_control">
+                    <label for="product_image">Upload Product Images:</label>
+                    <input type="file" id="product_image" name="product_image" accept="image/*" multiple />
+                </div>
+                <div class="textarea_control">
+                    <label for="review">Your Review:</label>
+                    <textarea id="review" name="review" rows="4" placeholder="Write your review here..."></textarea>
+                </div>
+                <div class="button_container">
+                    <button type="submit">Submit Review</button>
+                </div>
+               </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
